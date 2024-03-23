@@ -1,0 +1,62 @@
+
+:root {
+  --font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: #e0ffff;
+}
+
+ul {
+  list-style: none;
+}
+
+
+.gallery {
+  display: flex;
+  max-width: 1440px;
+  padding: 24px 156px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  transition: transform 0.3s ease;
+}
+
+
+.gallery-link:hover .gallery-image {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+/*:root {
+    --font-family: "Montserrat", sans-serif;
+  }
+  
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  img {
+    display: block;
+  
+    border-radius: 5px;
+  
+    transition: transform 0.3s ease;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    max-width: 1440px;
+    padding: 24px 156px;
+    margin: auto;
+  }
+  .modal {
+    background-color: rgba(46, 47, 66, 0.8);
+  }
