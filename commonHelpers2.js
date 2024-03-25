@@ -1,17 +1,2 @@
-import"./assets/modulepreload-polyfill-3cfb730f.js";const p=[{preview:"https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg",original:"https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820_1280.jpg",description:"Hokkaido Flower"},{preview:"https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg",description:"Container Haulage Freight"},{preview:"https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785_1280.jpg",description:"Aerial Beach View"},{preview:"https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg",original:"https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg",description:"Flower Blooms"},{preview:"https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg",original:"https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334_1280.jpg",description:"Alpine Mountains"},{preview:"https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571_1280.jpg",description:"Mountain Lake Sailing"},{preview:"https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg",description:"Alpine Spring Meadows"},{preview:"https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg",description:"Nature Landscape"},{preview:"https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",description:"Lighthouse Coast Sea"}],a=document.querySelector(".gallery");a.insertAdjacentHTML("beforeend",c(p));a.addEventListener("click",n);function c(t){return t.map(o=>`
-  <li class="gallery-item">
-  <a class="gallery-link" href="large-image.jpg"/>
-    <img
-      class="gallery-image"
-      src="${o.preview}"
-      data-source="${o.original}"
-      alt="${o.description}"
-      width= "360"
-      height="200"/>
-      </a>
-</li>
-`).join("")}function n(t){if(t.preventDefault(),t.target===!t.currentTarget)return;const o=t.target.dataset.source,e=t.target.alt,i=basicLightbox.create(`
-  <div class="modal">
-    <img src="${o}" alt="${e}" width ="1128" height = "648">
-    </div>`);i.show(),i.element().querySelector(".modal").addEventListener("click",()=>{i.close()})}
+import"./assets/modulepreload-polyfill-3cfb730f.js";const a="feedback-form-state",o=document.querySelector(".feedback-form"),s=o.querySelector(".textarea");o.addEventListener("submit",l);s.addEventListener("input",c);n();function l(e){const t=e.currentTarget.elements.email.value,r=e.currentTarget.elements.message.value;t===""||r===""?alert("All form fields must be filled in"):(console.log(n),resetForm())}function c(e){const t=e.target.value;localStorage.setItem(a,t)}function n(){const e=localStorage.setItem(a);e&&(s.value=e)}
 //# sourceMappingURL=commonHelpers2.js.map
