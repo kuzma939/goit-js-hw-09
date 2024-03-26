@@ -84,6 +84,6 @@ function createMarkup(arr) {
 }
 container.insertAdjacentHTML('beforeend', createMarkup(images));
 let gallery = new SimpleLightbox('.gallery a', {
-  captionData: 'alt',
+  captionsData: 'alt',
   captionDelay: 250,
 });
