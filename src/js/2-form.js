@@ -6,7 +6,7 @@ populateTextarea();
 const formData = {};
 function handleSubmit(event) {
    event.preventDefault();
-    //event.currentTarget.reset();
+   
     localStorage.removeItem(STORAGE_KEY);
         const email = event.target.elements.email.value;
         const message = event.target.elements.message.value;
@@ -15,6 +15,7 @@ function handleSubmit(event) {
          alert('All form fields must be filled in');
       }
     else {
+         //event.currentTarget.reset();
         console.log(formData);
         form.reset(); 
     }
