@@ -78,7 +78,6 @@ function createMarkup(arr) {
                   alt="${description}"
                   />
               </a>
-            </a>
         </li>`)
         .join('')
 }
