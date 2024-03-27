@@ -3,21 +3,19 @@ const form = document.querySelector(".feedback-form");
 form.addEventListener("submit", handleSubmit)
 form.addEventListener("input", onTextareaInput);
 populateTextarea();
-const formData = {};
+//const formData = {};
 function handleSubmit(event) {
    event.preventDefault();
-   
-    localStorage.removeItem(STORAGE_KEY);
         const email = event.target.elements.email.value;
         const message = event.target.elements.message.value;
-      //console.log({ email: email, message: message });
       if (email === '' || message === '') {
-         alert('All form fields must be filled in');
+         alert('All fields must be filled in');
       }
     else {
-         //event.currentTarget.reset();
-        console.log(formData);
-        form.reset(); 
+        const emptyObject = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        console.log(emptyObject);
+         event.currentTarget.reset();
+         localStorage.removeItem(STORAGE_KEY);
     }
 };
 function onTextareaInput(event) {
